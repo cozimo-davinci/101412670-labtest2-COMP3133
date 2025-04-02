@@ -1,0 +1,23 @@
+<h1 class="title">Mission List</h1>
+<app-mission-filter></app-mission-filter>
+<div class="missions">
+    <mat-card *ngFor="let launch of launches">
+        <mat-card-header>
+            <mat-card-title>{{ launch.mission_name }}</mat-card-title>
+            <mat-card-subtitle>Flight Number: {{ launch.flight_number }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="launch.links.mission_patch_small" alt="Mission Patch">
+        <mat-card-content>
+            <p>Launch Year: {{ launch.launch_year }}</p>
+            <p>Details: {{ launch.details }}</p>
+            <p>Rocket Name: {{ launch.rocket.rocket_name }}</p>
+            <p>Rocket Type: {{ launch.rocket.rocket_type }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <a mat-button [href]="launch.links.article_link">Article</a>
+            <a mat-button [href]="launch.links.wikipedia">Wikipedia</a>
+            <a mat-button [href]="launch.links.video_link">Video</a>
+            <button mat-raised-button [routerLink]="['/mission', launch.flight_number]">Details</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

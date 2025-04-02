@@ -1,0 +1,80 @@
+.mission-details {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+mat-card {
+    width: 400px;
+    /* Slightly wider than list cards */
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+mat-card-header {
+    padding-bottom: 8px;
+}
+
+mat-card-title {
+    font-size: 20px;
+    /* Slightly larger for emphasis */
+    line-height: 26px;
+    margin: 0;
+    font-weight: 700;
+    color: azure;
+    margin-bottom: 0.5em;
+}
+
+mat-card-subtitle {
+    font-size: 17px;
+    color: #1d7c77;
+    margin: 0;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+img[mat-card-image] {
+    width: 100%;
+    height: 400px;
+    /* Slightly taller than list */
+    object-fit: cover;
+    border: #1d7c77 3px solid;
+    border-radius: 19px;
+    background-color: aliceblue;
+}
+
+mat-card-content {
+    padding: 8px 0;
+}
+
+mat-card-content p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: aliceblue;
+}
+
+mat-card-actions {
+    padding: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+}
+
+a[mat-button] {
+    font-size: 12px;
+    padding: 4px 8px;
+    min-width: 60px;
+    background-color: #8a126c;
+}
+
+button[mat-raised-button] {
+    background-color: #e03112;
+    color: aliceblue;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+}

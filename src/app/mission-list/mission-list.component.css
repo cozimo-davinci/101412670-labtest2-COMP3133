@@ -1,0 +1,109 @@
+/* Container for all cards */
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.missions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+/* Customize the card itself */
+mat-card {
+    width: 350px;
+    /* Fixed width to make it smaller */
+    padding: 12px;
+    /* Reduce default padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    height: fit-content;
+    /* Softer shadow */
+}
+
+/* Header adjustments */
+mat-card-header {
+    padding-bottom: 8px;
+    /* Reduce space below header */
+}
+
+mat-card-title {
+    font-size: 24px;
+    /* Smaller title */
+    line-height: 24px;
+    margin: 0;
+    color: antiquewhite;
+    font-weight: 700;
+}
+
+mat-card-subtitle {
+    font-size: 14px;
+    /* Smaller subtitle */
+    color: #1565c0;
+    /* Lighter color */
+    margin-top: 1em;
+}
+
+/* Image styling */
+img[mat-card-image] {
+    width: 100%;
+    /* Fit within card */
+    height: 450px;
+    /* Fixed height to reduce size */
+    object-fit: cover;
+    /* Ensure image scales nicely */
+    border: #c96d17 solid 3px;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+/* Content adjustments */
+mat-card-content {
+    padding: 8px 0;
+    /* Reduce vertical padding */
+}
+
+mat-card-content p {
+    font-size: 14px;
+    /* Smaller text */
+    margin: 4px 0;
+    color: floralwhite;
+    /* Tighten spacing between paragraphs */
+}
+
+/* Actions (buttons) */
+mat-card-actions {
+    padding: 8px 0;
+    /* Reduce padding */
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow buttons to wrap if needed */
+    gap: 8px;
+    /* Space between buttons */
+}
+
+a[mat-button],
+button[mat-raised-button] {
+    font-size: 12px;
+    padding: 4px 8px;
+    min-width: 60px;
+    background-color: #8a126c;
+}
+
+button[mat-raised-button] {
+    background-color: #d4d108e5;
+    /* Custom color for raised button */
+    color: white;
+}
+
+button[mat-raised-button]:hover {
+    background-color: #c96d17;
+    /* Darker on hover */
+}
