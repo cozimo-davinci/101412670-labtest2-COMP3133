@@ -1,59 +1,69 @@
-# 101412670LabTest2Comp3133
+# 101412670-lab-test2-comp3133
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+This is an Angular application built for COMP3133 Lab Test 2, designed to display SpaceX launch data using the SpaceX REST API. The app features a list of missions, filtering by launch year, and detailed views of individual missions, styled with Angular Material for a modern UI.
 
-## Development server
+## Project Overview
 
-To start a local development server, run:
+- **Student ID**: 101412670 (replace with your actual student ID)
+- **Course**: COMP3133 - Full Stack Development
+- **Assignment**: Lab Test 2
+- **Framework**: Angular 17.x (assumed based on standalone components)
+- **API**: [SpaceX REST API](https://api.spacexdata.com/v3/launches)
+- **UI Library**: Angular Material
+- **Deployment**: Vercel (or your chosen hosting platform)
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. **Mission List Component**:
+   - Displays a list of SpaceX launches with fields like mission name, flight number, launch year, details, rocket info, and links.
+   - Styled with compact `mat-card` components, custom shadows, and elevation effects.
 
-## Code scaffolding
+2. **Mission Filter Component**:
+   - Allows filtering missions by launch year using a text input and buttons.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+3. **Mission Details Component**:
+   - Shows detailed information about a selected mission, accessed via routing with a `flight_number` parameter.
+   - Fetches data from the SpaceX API for a specific mission.
 
-```bash
-ng generate component component-name
-```
+4. **Service**:
+   - `SpacexService` fetches data from the SpaceX API and provides it to components via an observable.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+5. **Data Structure**:
+   - Uses a `Launch` interface to define the structure of SpaceX launch data.
 
-```bash
-ng generate --help
-```
+6. **Angular Material Design**:
+   - Custom-styled `mat-card`, `mat-button`, and other components for a polished, compact UI.
 
-## Building
+7. **Routing**:
+   - Navigates between the mission list (`/`) and mission details (`/mission/:flight_number`).
 
-To build the project run:
+## Prerequisites
 
-```bash
-ng build
-```
+- **Node.js**: v18.x or later (download from [nodejs.org](https://nodejs.org/))
+- **Angular CLI**: Install globally with `npm install -g @angular/cli`
+- **Git**: For version control
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Setup Instructions
 
-## Running unit tests
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/cozimo-davinci/101412670-lab-test2-comp3133.git
+   cd 101412670-lab-test2-comp3133
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+2. **Install Dependencies**:
+    ```bash
+    npm install
 
-```bash
-ng test
-```
+3. **Run the Application Locally:
+    ```bash
+    ng serve
 
-## Running end-to-end tests
+## How to Use
 
-For end-to-end (e2e) testing, run:
+1. **View All Missions**: Navigate to the root URL (/) to see the list of SpaceX launches.
+2. **Filter by Year**: Enter a year (e.g., 2020) in the filter input and click "Filter" to narrow down the list.
+3. **View Mission Details**: Click the "Details" button on any mission card to see its full details.
 
-```bash
-ng e2e
-```
+## License
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    This project is for educational purposes and not licences for commercial use.
